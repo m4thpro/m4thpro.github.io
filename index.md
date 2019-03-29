@@ -1,21 +1,25 @@
-## A test
+# manifesto
 
-You can use the [editor on GitHub](https://github.com/m4thpro/m4thpro.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+we seek to create math-based games. each game should teach the user about math, and not simply use math as something to overcome. 
 
+mathematics solves problems---it doen't create them.
 
-Let's see some pico8 code
+let's see some pico8 code
 
 ```lua
 function _init()
 -- initialize code
-end
-
-function _draw()
--- draw stuff
+-- called once on program startup
 end
 
 function _update()
--- update stuff when buttons are pushed
+-- changes behavor based on pressing buttons
+-- called once per update at 30fps
+end
+
+function _draw()
+-- draws stuff to the screen
+-- called once per visible frame
 end
 ```
 
