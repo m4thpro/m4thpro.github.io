@@ -31,7 +31,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 <iframe src="https://www.lexaloffle.com/bbs/widget.php?pid=isaac-0" allowfullscreen width="621" height="513" style="border:none; overflow:hidden"></iframe>
 
-<iframe src="https://m4th.pro/chaosgrame.html" allowfullscreen width="621" height="513" style="border:none; overflow:hidden"></iframe>
+<iframe src="https://m4th.pro/chaosgame.html" allowfullscreen width="621" height="513" style="border:none; overflow:hidden"></iframe>
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
