@@ -1,6 +1,10 @@
 # manifesto
 
-we seek to share the joy mathematics 
+we find joy in doing mathematics 
+we seek to share this joy
+by helping others learn to know mathematics
+to play with mathematics
+
 by helping people interact directly with mathematics.
 
 each game should allow someone to interact with mathematics, 
@@ -38,32 +42,3 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 <iframe src="https://m4th.pro/chaosgame.html" allowfullscreen width="621" height="513" style="border:none; overflow:hidden"></iframe>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/m4thpro/m4thpro.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
