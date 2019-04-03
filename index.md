@@ -1,6 +1,11 @@
 # manifesto
 
-we seek to create math-based games. each game should teach the user about math, and not simply use math as something to overcome. 
+we seek to share the joy mathematics 
+by helping people interact directly with mathematics.
+
+each game should allow someone to interact with mathematics, 
+challenge them
+each game should teach the user about math, and not simply use math as something to overcome. 
 
 mathematics solves problems---it doen't create them.
 
