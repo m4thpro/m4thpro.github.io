@@ -37,6 +37,14 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Markdown
 
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
 
 <iframe src="https://www.lexaloffle.com/bbs/widget.php?pid=isaac-0" allowfullscreen width="621" height="513" style="border:none; overflow:hidden"></iframe>
 

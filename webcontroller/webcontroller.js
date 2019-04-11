@@ -16,38 +16,32 @@ container.appendChild(butns)
 butns.id = "btns"
 document.querySelector('body').appendChild(container)
 
-function pauseButton() {
-  const container = document.createElement("div")
-  container.classList.add("pause_container")
-  const btn = document.createElement("div")
-  btn.classList.add("pause")
-  const img = document.createElement("img")
-  img.src = "pico-pause.png"
-  btn.appendChild(img)
-  btn.addEventListener("touchstart", (e)=>{
-    e.preventDefault()
-    pico8_buttons[0] += map["p"]
-    setTimeout(()=>{
-      pico8_buttons[0] -= map["p"]
-      console.log(pico8_buttons[0])
-    },100)
-    console.log(pico8_buttons[0])
-  })
-  container.appendChild(btn)
-  butns.appendChild(container)
-}
-
 function addButton(button, text) {
   const btn = document.createElement("div")
   btn.classList.add("button")
   const img = document.createElement("img")
-  img.src = "pico-o-x.png"
+  img.src = "/webcontroller/pico-o-x.png"
   btn.appendChild(img)
   btn.addEventListener('touchstart', (e) => {
     e.preventDefault()
     const coords = e.target.getBoundingClientRect()
     const pageX = e.changedTouches[0].pageX
     const pageY = e.changedTouches[0].pageY
+    const x = pageX - (coords.left + coords.width/2)
+    const y = -(pageY - (coords.top + coords.height/2))
+    if (y > -0.5 * x) {
+      pico8_buttons[0] += map["x"]
+    }
+    if (y < -0.5 * x) {
+      pico8_buttons[0] += map["z"]
+    }
+    const val = pico8_buttons[0].toString(2)
+  })
+  btn.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+    const coords = e.target.getBoundingClientRect()
+    const pageX = e.pageX
+    const pageY = e.pageY
     const x = pageX - (coords.left + coords.width/2)
     const y = -(pageY - (coords.top + coords.height/2))
     if (y > -0.5 * x) {
@@ -65,6 +59,13 @@ function addButton(button, text) {
       .reduce((acc, curr) => acc + Math.pow(2, curr), 0);
     pico8_buttons[0] = val
   })
+  btn.addEventListener('mouseup', (e) => {
+    e.preventDefault()
+    const val = calculateButtons(pico8_buttons)
+      .filter(x => x < 4)
+      .reduce((acc, curr) => acc + Math.pow(2, curr), 0);
+    pico8_buttons[0] = val
+  })
   btn.addEventListener('touchmove', (e) => {
     e.preventDefault()
   })
@@ -76,8 +77,29 @@ function addXY(button, text) {
   btn.classList.add("button")
   btn.classList.add("xy")
   const img = document.createElement("img")
-  img.src = "pico-dpad.png"
+  img.src = "/webcontroller/pico-dpad.png"
   btn.appendChild(img)
+
+  btn.addEventListener('mousedown', (e) => {
+    const coords = e.target.getBoundingClientRect();
+    const pageX = e.pageX
+    const pageY = e.pageY
+    const x = pageX - (coords.left + coords.width/2)
+    const y = -(pageY - (coords.top + coords.height/2))
+    console.log(e.clientX, e.clientY);
+    if (Math.abs(x) > coords.width/2 || Math.abs(y) > coords.height/2) return;
+    if (x > 20) {
+      pico8_buttons[0] += map["right"]
+    } else if (x < -20) {
+      pico8_buttons[0] += map["left"]
+    } 
+    if (y > 20) {
+      pico8_buttons[0] += map["up"]
+    } else if (y < -20) {
+      pico8_buttons[0] += map["down"]
+    }
+  });
+  
   btn.addEventListener('touchstart', (e) => {
     e.preventDefault()
     const coords = e.target.getBoundingClientRect()
@@ -98,7 +120,6 @@ function addXY(button, text) {
     }
   })
 
-
   btn.addEventListener('touchend', (e) => {
     e.preventDefault()
     const val = calculateButtons(pico8_buttons)
@@ -107,6 +128,13 @@ function addXY(button, text) {
     pico8_buttons[0] = val
   })
 
+  btn.addEventListener('mouseup', (e) => {
+    e.preventDefault()
+    const val = calculateButtons(pico8_buttons)
+      .filter(x => x == 5 || x == 4)
+      .reduce((acc, curr) => acc + Math.pow(2, curr), 0);
+    pico8_buttons[0] = val
+  })  
 
   btn.addEventListener('touchmove', (e) => {
     e.preventDefault()
@@ -173,7 +201,7 @@ function calculateButtons(picobtns) {
 }
 addXY("xy", "XY")
 addButton("x","X")
-pauseButton()
+
 
 
 
