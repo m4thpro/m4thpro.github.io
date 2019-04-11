@@ -1,9 +1,14 @@
 # How to add another game
 
-Look at `games.txt` which has URLs pointing to the `.p8` files.  Add
-another URL to that file, and then run `build.sh` again to populate
-the `games` directory.  You will need both PICO-8 and `wget`
-installed.
+Under `games` you see some `.md` files.  Those Markdown have a YAML header which looks like
+```yaml
+layout: game
+title:  "Topology"
+pico8: topology
+github: https://github.com/m4thpro/mathgames/blob/master/topology.p8
+source: https://raw.githubusercontent.com/m4thpro/mathgames/master/topology.p8
+```
+To add more games, create additional files with `layout: game`.  Include `pico8:` with the short name of the game, along with links to Github and the raw source.  Then run `build.sh`, which relies on PICO-8 itself and `wget` to download the games and convert them to Javascript.
 
 # How to view the website locally
 
