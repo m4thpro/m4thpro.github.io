@@ -202,6 +202,8 @@ function calculateButtons(picobtns) {
 addXY("xy", "XY")
 addButton("x","X")
 
-
-
+window.addEventListener('DOMContentLoaded', (event) => {
+  // This, apparently, hides the address bar
+  window.scrollTo(0,1);  
+});
 
