@@ -1,3 +1,4 @@
+
 ---
 layout: game
 title:  "Topology"
@@ -6,4 +7,6 @@ github: https://github.com/m4thpro/mathgames/blob/master/topology.p8
 source: https://raw.githubusercontent.com/m4thpro/mathgames/master/topology.p8
 ---
 
-Some information about this game.
+With this game you can explore a surface.
+
+This game is currently under development.
