@@ -1,3 +1,7 @@
+#btns {
+    display: none;
+}
+
 @media (max-width: 512px) {
     body {
 	overflow:hidden;
