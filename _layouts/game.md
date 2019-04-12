@@ -1,26 +1,11 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
+<div style="width:512px; float: right; margin-left: 2ex; margin-bottom: 2ex;">
 
-<STYLE TYPE="text/css">
-<!--
+  <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
 
-
--->
-</STYLE>
-    
-</head>
-
-<body bgcolor=#303030>
-
-	<br><br><br>
-
-	<center><div style="width:512px;">
-
-	<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-
-	<script type="text/javascript">
+  <script type="text/javascript">
 		var canvas = document.getElementById("canvas");
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
@@ -42,11 +27,11 @@ layout: default
 			// read and write to these values
 			var pico8_gpio = new Array(128);
 		*/
-	</script>
+  </script>
 
-	<script async type="text/javascript" src="/games/{{ page.pico8 }}.js"></script>
+  <script async type="text/javascript" src="/games/{{ page.pico8 }}.js"></script>
 	  
-	<script>
+  <script>
 		// key blocker. prevent cursor keys from scrolling page while playing cart.
 		
 		function onKeyDown_blocker(event) {
@@ -63,13 +48,10 @@ layout: default
 
 		document.addEventListener('keydown', onKeyDown_blocker, false);
 
-	</script>
+  </script>
         
-	<br>
-
-	<div class=pico8_el onclick="Module.pico8Reset();">
-
-	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAaklEQVR4Ae2dOwoAMQhE15A+rfc/3bZ7AlMnQfywCkKsfcgMM9ZP+QHtIn0vLeBAFduiFdQ/0DmvtR5LXJ6CPSXe2ZXcFNlTxFbemKrbZPs35XogeS9xeQr+anT6LzoOwEDwZJ7jwhXUnwkTTiDQ2Ja34AAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Reset" width=12 height=	12/>
+  <div class=pico8_el onclick="Module.pico8Reset();">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAaklEQVR4Ae2dOwoAMQhE15A+rfc/3bZ7AlMnQfywCkKsfcgMM9ZP+QHtIn0vLeBAFduiFdQ/0DmvtR5LXJ6CPSXe2ZXcFNlTxFbemKrbZPs35XogeS9xeQr+anT6LzoOwEDwZJ7jwhXUnwkTTiDQ2Ja34AAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Reset" width=12 height=	12/>
 
 	Reset</div>
 
@@ -86,16 +68,20 @@ layout: default
 	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXklEQVR4Ae2doQ4AIQxD4YLH8v9fh+ULhjpxxSwLg2uyapr1JRu1iV5Z+1BGl4+xNpX38SYo2uRvYiT5LwEmt+ocgXVLrhPEgBiw8Q5w7/kueSkK+D2tJO4E/I3GrwkqQCBabEj/4QAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Toggle Sound" width=12 height=12/>
 	
 	Sound</div>
-	<div class=pico8_el ><a target="_new" href="http://www.lexaloffle.com/bbs/?cat=7&sub=2">
-	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlElEQVR4Ae2dMQ5FQBCGh6jcwAkkateg3DiAa+iQUGqVKi95FQfAJRQOoHeBUf8JyQqKjZ1uMzuz2e/LTE3KhyF7kSlgLOykas23f6D+A9Yp84aAOYU15pcJnfji0Il2ID8HzC4y38ZrnfIBGxeRoR3c3EWrACdsV5BOsx7OSRnrOXh4F5HzA6bevwUn8wlz7eCDsQM99B3ks0s/4QAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="More Carts" width=12 height=12/>
-
-	Carts</a></div>
-
 	<br>	
+  <p class="help">Use the arrow keys, X, and C.</p>
 
-	</div></center>
-	<br><br>
+
+</div>
 
 <script src="/webcontroller/webcontroller.js"></script>
 
+<h1>{{ page.title }}</h1>
+
+<section id="downloads">
+  <a href="{{ page.github }}" class="btn btn-github"><span class="icon"></span>View source code</a>
+</section>
+
+  
 {{ content }}
+

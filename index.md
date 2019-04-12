@@ -1,17 +1,30 @@
 # manifesto
 
-we find joy in doing mathematics 
-we seek to share this joy
-by helping others learn to know mathematics
-to play with mathematics
+- we find joy in doing mathematics 
+- we seek to share this joy
+- by helping others learn to know mathematics
+- to play with mathematics
+- by helping people interact directly with mathematics.
+- each game should allow someone to interact with mathematics, 
+- challenge them
+- each game should teach the user about math, and not simply use math as something to overcome. 
+- mathematics solves problems---it doen't create them.
 
-by helping people interact directly with mathematics.
+<hr/>
 
-each game should allow someone to interact with mathematics, 
-challenge them
-each game should teach the user about math, and not simply use math as something to overcome. 
+# Play Games
 
-mathematics solves problems---it doen't create them.
+<div class="thumbnails">
+  {% for game in site.games %}
+  <div class="thumb">
+    <a href="{{ game.url }}"><img src="/games/{{ game.pico8 }}.p8.png"/></a>
+  </div>
+  {% endfor %}
+</div>
+
+<hr/>
+
+# Make your own games
 
 let's see some pico8 code
 
@@ -31,22 +44,3 @@ function _draw()
 -- called once per visible frame
 end
 ```
-
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-
-<iframe src="https://www.lexaloffle.com/bbs/widget.php?pid=isaac-0" allowfullscreen width="621" height="513" style="border:none; overflow:hidden"></iframe>
-
-<iframe src="https://m4th.pro/chaosgame.html" allowfullscreen width="621" height="513" style="border:none; overflow:hidden"></iframe>
-

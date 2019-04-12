@@ -27,6 +27,7 @@ echo "__lua__" >> commands.txt
 for game in *.p8
 do
     echo "load('$game')" >> commands.txt
+    echo "save('$game.png')" >> commands.txt
     echo "export('$(basename "$game" .p8).html')" >> commands.txt
 done
 pico8 -home .. -desktop .. -x commands.txt
@@ -40,4 +41,5 @@ mkdir -p games
 for game in .cache/carts/*.p8
 do
     cp .cache/carts/$(basename $game .p8).js games/
+    cp .cache/carts/$(basename $game .p8).p8.png games/
 done
