@@ -1,6 +1,6 @@
 # How to add another game
 
-Under `games` you see some `.md` files.  Those Markdown have a YAML header which looks like
+Under `_games` you see some `.md` files.  Those Markdown have a YAML header which looks like
 ```yaml
 layout: game
 title:  "Topology"
