@@ -69,7 +69,7 @@ layout: default
 	
 	Sound</div>
 	<br>	
-  <p class="help">Use the arrow keys, X, and C.</p>
+  <p class="help">On keyboards, use the arrow keys, X (A-button), and Z (B-button).</p>
 
 
 </div>
