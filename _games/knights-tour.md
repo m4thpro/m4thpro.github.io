@@ -2,8 +2,8 @@
 layout: game
 title:  "Knight's Tour"
 pico8: knightstour
-github: https://github.com/m4thpro/mathgames/blob/master/knightstour.p8
-source: https://raw.githubusercontent.com/m4thpro/mathgames/master/knightstour.p8
+github: https://github.com/m4thpro/mathgames/blob/knightstour/knightstour.p8
+source: https://raw.githubusercontent.com/m4thpro/knightstour/master/knightstour.p8
 ---
 
 Take your knight on a tour of the board! 
