@@ -1,9 +1,8 @@
 title: m4th.pro(gramming)
 theme: jekyll-theme-hacker
-permalink: pretty
 description: make and play math video games
 
 collections:
   games:
     output: true
-    permalink: /:collection/:name
+
