@@ -6,7 +6,7 @@ github: https://github.com/kisonecat/quarder
 source: https://github.com/kisonecat/quarder/main/quarder.p8
 ---
 
-# Find substrings in (or out) or order
+# Find substrings in order, or out of order
 
 Shuffle the digits 0123456789.  You might get 
 
